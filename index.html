@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Свадебное приглашение</title>
+  <meta name="description" content="Свадебное приглашение — детали и RSVP." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <div class="lang">
+        <button class="lang__btn is-active" type="button" data-lang="ru" aria-pressed="true">RU</button>
+        <button class="lang__btn" type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <a class="topbar__link" href="#rsvp">RSVP</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__inner">
+        <p class="kicker" data-i18n="hero_kicker">Мы женимся</p>
+        <h1 class="title"><span data-i18n="names">Имя & Имя</span></h1>
+        <p class="subtitle"><span data-i18n="date">24 августа 2026</span> · <span data-i18n="city">Кишинёв</span></p>
+
+        <div class="hero__cta">
+          <a class="btn" href="#details" data-i18n="hero_btn_details">Смотреть детали</a>
+          <a class="btn btn--ghost" href="#rsvp" data-i18n="hero_btn_rsvp">Подтвердить участие</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container card">
+        <h2 class="h2" data-i18n="invite_title">Дорогие гости!</h2>
+        <p class="p" data-i18n="invite_text">Мы будем счастливы разделить с вами наш особенный день.</p>
+      </div>
+    </section>
+
+    <section class="section" id="details">
+      <div class="container grid">
+        <div class="card">
+          <h2 class="h2" data-i18n="details_title">Детали</h2>
+
+          <div class="info">
+            <div class="info__row">
+              <div class="info__label" data-i18n="details_when">Когда</div>
+              <div class="info__value">
+                <span data-i18n="details_date">24 августа 2026</span><br/>
+                <span data-i18n="details_time">Сбор гостей: 16:00 · Церемония: 16:30</span>
+              </div>
+            </div>
+
+            <div class="info__row">
+              <div class="info__label" data-i18n="details_where">Где</div>
+              <div class="info__value">
+                <span data-i18n="venue_name">Название площадки</span><br/>
+                <span data-i18n="venue_address">Адрес, город</span>
+              </div>
+            </div>
+
+            <div class="info__row">
+              <div class="info__label" data-i18n="details_map">Карта</div>
+              <div class="info__value">
+                <a class="link" href="https://maps.google.com/?q=" target="_blank" rel="noopener" data-i18n="map_open">Открыть маршрут</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2 class="h2" data-i18n="timeline_title">Тайминг</h2>
+          <ul class="timeline">
+            <li><span class="timeline__time" data-i18n="t1_time">16:00</span><span class="timeline__text" data-i18n="t1_text">Сбор гостей</span></li>
+            <li><span class="timeline__time" data-i18n="t2_time">16:30</span><span class="timeline__text" data-i18n="t2_text">Церемония</span></li>
+            <li><span class="timeline__time" data-i18n="t3_time">17:30</span><span class="timeline__text" data-i18n="t3_text">Банкет</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="rsvp">
+      <div class="container card">
+        <h2 class="h2" data-i18n="rsvp_title">Подтверждение участия</h2>
+        <p class="p" data-i18n="rsvp_text">Пожалуйста, подтвердите присутствие до <strong>1 августа</strong>.</p>
+
+        <div class="rsvp">
+          <a class="btn" href="https://forms.gle/XXXX" target="_blank" rel="noopener" data-i18n="rsvp_btn">Открыть форму RSVP</a>
+          <p class="muted" data-i18n="rsvp_hint">Если ссылка не открывается, напишите нам — контакты ниже.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container card">
+        <h2 class="h2" data-i18n="contacts_title">Контакты</h2>
+        <div class="contacts">
+          <a class="link" href="https://t.me/username" target="_blank" rel="noopener">Telegram</a>
+          <span class="dot">•</span>
+          <a class="link" href="https://wa.me/37300000000" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <span class="muted">© <span id="y"></span> <span data-i18n="names">Имя & Имя</span></span>
+      </div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
