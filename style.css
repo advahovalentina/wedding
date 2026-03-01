@@ -197,28 +197,25 @@ hr {
 .days div {
   padding: 10px 0;
   font-weight: 500;
-  border-radius: 50%;
-  position: relative;
+    position: relative;
 }
 .ring {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 44px;
-  height: 44px;
-  margin: 0 auto;
-  font-weight: 700;
-  color: #fff;
-    background: conic-gradient(from 0deg, #6f7b5a, #a8b28d, #6f7b5a);
-    border-radius: 50%;
-    box-shadow: 0 0 8px rgba(111, 123, 90, 0.6);
-    transition: transform 0.2s;
+  position: relative;
+    width: 46px;
+    height: 46px;
+    background: url('./images/ring.png') no-repeat center -4px;
+    background-size: contain;
+    transition: transform 0.3s;
 }
+
 .ring:hover {
   transform: scale(1.15);
   cursor: pointer;
 }
 
+.ring span {
+  font-weight: 600;
+}
 /* =========================
    TIMELINE
 ========================= */
