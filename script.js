@@ -1,87 +1,65 @@
-const dict = {
-  ru: {
-    hero_kicker: "Мы женимся",
-    names: "Имя & Имя",
-    date: "24 августа 2026",
-    city: "Кишинёв",
-    hero_btn_details: "Смотреть детали",
-    hero_btn_rsvp: "Подтвердить участие",
-    invite_title: "Дорогие гости!",
-    invite_text: "Мы будем счастливы разделить с вами наш особенный день.",
-    details_title: "Детали",
-    details_when: "Когда",
-    details_where: "Где",
-    details_map: "Карта",
-    details_date: "24 августа 2026",
-    details_time: "Сбор гостей: 16:00 · Церемония: 16:30",
-    venue_name: "Название площадки",
-    venue_address: "Адрес, город",
-    map_open: "Открыть маршрут",
-    timeline_title: "Тайминг",
-    t1_time: "16:00",
-    t1_text: "Сбор гостей",
-    t2_time: "16:30",
-    t2_text: "Церемония",
-    t3_time: "17:30",
-    t3_text: "Банкет",
-    rsvp_title: "Подтверждение участия",
-    rsvp_text: "Пожалуйста, подтвердите присутствие до <strong>1 августа</strong>.",
-    rsvp_btn: "Открыть форму RSVP",
-    rsvp_hint: "Если ссылка не открывается, напишите нам — контакты ниже.",
-    contacts_title: "Контакты",
-  },
-  en: {
-    hero_kicker: "We’re getting married",
-    names: "Name & Name",
-    date: "24 August 2026",
-    city: "Chișinău",
-    hero_btn_details: "See details",
-    hero_btn_rsvp: "Confirm attendance",
-    invite_title: "Dear guests!",
-    invite_text: "We’d be happy to celebrate our special day with you.",
-    details_title: "Details",
-    details_when: "When",
-    details_where: "Where",
-    details_map: "Map",
-    details_date: "24 August 2026",
-    details_time: "Guests arrive: 4:00 PM · Ceremony: 4:30 PM",
-    venue_name: "Venue name",
-    venue_address: "Address, city",
-    map_open: "Open directions",
-    timeline_title: "Schedule",
-    t1_time: "4:00 PM",
-    t1_text: "Guests arrive",
-    t2_time: "4:30 PM",
-    t2_text: "Ceremony",
-    t3_time: "5:30 PM",
-    t3_text: "Dinner",
-    rsvp_title: "RSVP",
-    rsvp_text: "Please confirm your attendance by <strong>1 August</strong>.",
-    rsvp_btn: "Open RSVP form",
-    rsvp_hint: "If the link doesn’t open, message us — contacts below.",
-    contacts_title: "Contacts",
-  }
-};
+      const translations = {
+        ru: {
+          we_marry: "Мы женимся!",
+          dear_guests: "Дорогие гости!",
+          invitation_text: "Совсем скоро состоиться наша свадьба! Мы рады пригласить вас стать свидетелями этого торжества и разделить с нами самые яркие моменты!",
+          july: "Июль",
+          mon: "Пн", tue: "Вт", wed: "Ср", thu: "Чт", fri: "Пт", sat: "Сб", sun: "Вс",
+          venue: "Место проведения",
+          view_map: "Посмотреть на карте",
+          schedule: "Тайминг",
+          guests_arrival: "Сбор гостей",
+          ceremony_start: "Начало церемонии",
+          photoshoot: "Фотосессия",
+          banquet: "Банкет",
+          dress_code: "Дресс-код",
+          dress_text: "Для нас главное - ваше присутствие! Но мы будем рады, если в своих нарядах вы поддержите нашу цветовую гамму и стиль нашей свадьбы!",
+          contacts_title: "Контакты"
+        },
+        en: {
+          we_marry: "We're getting married!",
+          dear_guests: "Dear guests!",
+          invitation_text: "Our wedding day is coming soon! We are happy to invite you to witness the celebration and share the most joyful moments with us!",
+          july: "July",
+          mon: "Mon", tue: "Tue", wed: "Wed", thu: "Thu", fri: "Fri", sat: "Sat", sun: "Sun",
+          venue: "Venue",
+          view_map: "View on map",
+          schedule: "Schedule",
+          guests_arrival: "Guests arrival",
+          ceremony_start: "Ceremony start",
+          photoshoot: "Photoshoot",
+          banquet: "Banquet",
+          dress_code: "Dress Code",
+          dress_text: "Your presence is most important! But we would be happy if you match our color palette and wedding style in your outfit!",
+          contacts_title: "Contacts"
+        },
+        de: {
+          we_marry: "Wir heiraten!",
+          dear_guests: "Liebe Gäste!",
+          invitation_text: "Unsere Hochzeit steht bald bevor! Wir freuen uns, euch einzuladen, Zeugen dieser Feier zu sein und die schönsten Momente mit uns zu teilen!",
+          july: "Juli",
+          mon: "Mo", tue: "Di", wed: "Mi", thu: "Do", fri: "Fr", sat: "Sa", sun: "So",
+          venue: "Veranstaltungsort",
+          view_map: "Auf der Karte ansehen",
+          schedule: "Zeitplan",
+          guests_arrival: "Ankunft der Gäste",
+          ceremony_start: "Beginn der Zeremonie",
+          photoshoot: "Fotoshooting",
+          banquet: "Bankett",
+          dress_code: "Dresscode",
+          dress_text: "Das Wichtigste ist eure Anwesenheit! Wir würden uns freuen, wenn ihr in euren Outfits unsere Farbpalette und den Stil unserer Hochzeit unterstützt!",
+          contacts_title: "Kontakte"
+        }
+      };
 
-function setLang(lang) {
-  document.documentElement.lang = lang;
-  document.querySelectorAll("[data-i18n]").forEach(el => {
-    const key = el.getAttribute("data-i18n");
-    const value = dict[lang][key];
-    if (value == null) return;
-    if (key === "rsvp_text") el.innerHTML = value;
-    else el.textContent = value;
-  });
-
-  document.querySelectorAll(".lang__btn").forEach(btn => {
-    const active = btn.dataset.lang === lang;
-    btn.classList.toggle("is-active", active);
-    btn.setAttribute("aria-pressed", active ? "true" : "false");
-  });
-
-  localStorage.setItem("wedding_lang", lang);
-}
-
-document.getElementById("y").textContent = new Date().getFullYear();
-setLang(localStorage.getItem("wedding_lang") || "ru");
-document.querySelectorAll(".lang__btn").forEach(btn => btn.addEventListener("click", () => setLang(btn.dataset.lang)));
+      document.querySelectorAll(".lang button").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const lang = btn.dataset.lang;
+          document.querySelectorAll("[data-i18n]").forEach(el => {
+            const key = el.dataset.i18n;
+            if(translations[lang][key]) el.textContent = translations[lang][key];
+          });
+          document.querySelectorAll(".lang button").forEach(b => b.setAttribute("aria-pressed", "false"));
+          btn.setAttribute("aria-pressed", "true");
+        });
+      });

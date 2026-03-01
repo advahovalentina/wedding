@@ -69,6 +69,33 @@ body {
 /* =========================
          HERO
 ========================= */
+.lang {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.lang button {
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-family: "Oceanic", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.lang button[aria-pressed="true"] {
+  background: #fff;
+  color: #222;
+}
+
+.lang button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
 .hero {
   padding: 56px 0 26px;
 }
@@ -319,3 +346,47 @@ hr {
           padding: 26px 22px;
         }
         }
+.lang-landing {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #222, #444);
+  color: #fff;
+  font-family: "Oceanic", sans-serif;
+  text-align: center;
+}
+
+.lang-landing h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.lang-landing p {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.lang-options {
+  display: flex;
+  gap: 30px;
+}
+
+.lang-btn {
+  display: inline-block;
+  padding: 20px 40px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.lang-btn:hover {
+  background: #fff;
+  color: #222;
+  transform: scale(1.1);
+}

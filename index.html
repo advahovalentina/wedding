@@ -3,31 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Wedding Invitation</title>
-  <meta name="description" content="Wedding invitation" />
+    <title>Wedding Invitation</title>
+    <meta name="description" content="Wedding invitation" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- <header class="topbar">
-      <div class="container topbar__inner">
-        <div class="lang">
-          <button
-            type="button"
-            data-lang="ru"
-            aria-pressed="true"
-          >
-            RU
-          </button>
-          <button
-            type="button"
-            data-lang="en"
-            aria-pressed="false"
-          >
-            EN
-          </button>
-        </div>
+<div class="lang">
+      <button type="button" data-lang="ru" aria-pressed="true">RU</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      <button type="button" data-lang="de" aria-pressed="false">DE</button>
       </div>
-    </header> -->
 
     <main>
       <section class="hero">
@@ -38,112 +23,111 @@
             Irina
           </h1>
           <hr />
-          <p class="kicker">Мы женимся!</p>
+          <p class="kicker" data-i18n="we_marry">Мы женимся!</p>
           <p class="data">19|07|26</p>
         </div>
-        </section>
-        
-        <section class="section">
-          <div class="container card">
-            <p class="kicker">Дорогие гости!</p>
-            <p class="p">
-              Совсем скоро состоиться наша свадьба!
-              Мы рады пригласить вас стать свидетелями этого торжества и разделить с нами самые яркие моменты!
-            </p>
-            </div>
+      </section>
+      
+      <section class="section">
+        <div class="container card">
+          <p class="kicker" data-i18n="dear_guests">Дорогие гости!</p>
+          <p class="p" data-i18n="invitation_text">
+            Совсем скоро состоиться наша свадьба!
+            Мы рады пригласить вас стать свидетелями этого торжества и разделить с нами самые яркие моменты!
+          </p>
+          </div>
       </section>
 
-  <section class="section">
-    <div class="container card">
-      <p class="kicker">Июль</p>
-      <div class="calendar">
-        <div class="weekdays">
-          <div>Пн</div>
-          <div>Вт</div>
-          <div>Ср</div>
-          <div>Чт</div>
-          <div>Пт</div>
-          <div>Сб</div>
-          <div>Вс</div>
-        </div>
-<div class="days">
-  <div></div>
-  <div></div>
-
-  <div>1</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-  <div>6</div>
-  <div>7</div>
-  <div>8</div>
-  <div>9</div>
-  <div>10</div>
-  <div>11</div>
-  <div>12</div>
-  <div>13</div>
-  <div>14</div>
-  <div>15</div>
-  <div>16</div>
-  <div>17</div>
-  <div>18</div>
-  <div class="ring"><span>19</span></div>
-  <div>20</div>
-  <div>21</div>
-  <div>22</div>
-  <div>23</div>
-  <div>24</div>
-  <div>25</div>
-  <div>26</div>
-  <div>27</div>
-  <div>28</div>
-  <div>29</div>
-  <div>30</div>
-  <div>31</div>
-  </div>
-  </div>
-        </div>
-        </section>
-
-  <section class="section">
-    <div class="container card">
-            <p class="kicker">Место проведения</p>
-            <p class="p">Sala de festivități Poseidon</p>
-            <a class="btn btn--ghost" href="https://www.google.com/maps?q=Sala+de+festivități+Poseidon" target="_blank"
-              rel="noopener">
-              Посмотреть на карте
-            </a>
+      <section class="section">
+        <div class="container card">
+          <p class="kicker" data-i18n="july">Июль</p>
+          <div class="calendar">
+            <div class="weekdays">
+              <div data-i18n="mon">Пн</div>
+              <div data-i18n="tue">Вт</div>
+              <div data-i18n="wed">Ср</div>
+              <div data-i18n="thu">Чт</div>
+              <div data-i18n="fri">Пт</div>
+              <div data-i18n="sat">Сб</div>
+              <div data-i18n="sun">Вс</div>
+              </div>
+              <div class="days">
+                <div></div>
+                <div></div>
+              <div>1</div>
+              <div>2</div>
+              <div>3</div>
+              <div>4</div>
+              <div>5</div>
+              <div>6</div>
+              <div>7</div>
+              <div>8</div>
+              <div>9</div>
+              <div>10</div>
+              <div>11</div>
+              <div>12</div>
+              <div>13</div>
+              <div>14</div>
+              <div>15</div>
+              <div>16</div>
+              <div>17</div>
+              <div>18</div>
+              <div class="ring"><span>19</span></div>
+              <div>20</div>
+              <div>21</div>
+              <div>22</div>
+              <div>23</div>
+              <div>24</div>
+              <div>25</div>
+              <div>26</div>
+              <div>27</div>
+              <div>28</div>
+              <div>29</div>
+              <div>30</div>
+              <div>31</div>
+              </div>
+              </div>
         </div>
       </section>
 
-      <section class="section" id="details">
-
-          <div class="card">
-            <h2 class="h2">Тайминг</h2>
-            <ul class="timeline">
-              <li>
-                <span class="timeline__time">15:30</span><span class="timeline__text">Сбор гостей</span>
-              </li>
-              <li>
-                <span class="timeline__time">16:00</span><span class="timeline__text">Начало церемония</span>
-              </li>
-              <li>
-                <span class="timeline__time">17:00</span><span class="timeline__text">Фотосессия</span>
-                </li>
-                <li>
-                  <span class="timeline__time">18:00</span><span class="timeline__text">Банкет</span>
-              </li>
-            </ul>
-            </div>
+      <section class="section">
+        <div class="container card">
+          <p class="kicker" data-i18n="venue">Место проведения</p>
+          <p class="p">Sala de festivități Poseidon</p>
+          <a class="btn btn--ghost" href="https://www.google.com/maps?q=Sala+de+festivități+Poseidon" target="_blank"
+            rel="noopener" data-i18n="view_map">
+            Посмотреть на карте
+          </a>
+        </div>
       </section>
 
       <section class="section" id="details">
         <div class="card">
-          <h2 class="h2">Дресс-код</h2>
-          <p class="p">
+          <h2 class="h2" data-i18n="schedule">Тайминг</h2>
+          <ul class="timeline">
+            <li>
+              <span class="timeline__time">15:30</span><span class="timeline__text" data-i18n="guests_arrival">Сбор гостей</span>
+              </li>
+              <li>
+              <span class="timeline__time">16:00</span><span class="timeline__text" data-i18n="ceremony_start">Начало церемония</span>
+              </li>
+              <li>
+              <span class="timeline__time">17:00</span><span class="timeline__text" data-i18n="photoshoot">Фотосессия</span>
+              </li>
+              <li>
+              <span class="timeline__time">18:00</span><span class="timeline__text" data-i18n="banquet">Банкет</span>
+              </li>
+              </ul>
+              </div>
+      </section>
+
+      <section class="section" id="details">
+        <div class="card">
+          <h2 class="h2" data-i18n="dress_code">Дресс-код</h2>
+          <p class="p" data-i18n="dress_text">
             Для нас главное - ваше присутствие! Но мы будем рады, если в своих нарядах вы поддержите нашу цветовую гамму и
-            стиль нашей свадьбы!</p>
+            стиль нашей свадьбы!
+            </p>
           <div class="color-palette">
             <span class="color-circle pastel1"></span>
             <span class="color-circle pastel2"></span>
@@ -152,40 +136,52 @@
         </div>
       </section>
 
-
       <section class="section">
         <div class="container card">
           <h2 class="h2" data-i18n="contacts_title">Контакты</h2>
           <div class="contacts">
-            <a
-              class="link"
-              href="https://t.me/username"
-              target="_blank"
-              rel="noopener"
-              >Telegram</a
-            >
+            <a class="link" href="https://t.me/username" target="_blank" rel="noopener">Telegram</a>
             <span class="dot">•</span>
-            <a
-              class="link"
-              href="https://wa.me/37378740408"
-              target="_blank"
-              rel="noopener"
-              >WhatsApp</a
-            >
+            <a class="link" href="https://wa.me/37378740408" target="_blank" rel="noopener">WhatsApp</a>
           </div>
         </div>
       </section>
 
       <footer class="footer">
         <div class="container footer__inner">
-          <span class="muted"
-            >© <span id="y"></span>
-            <span>Jonathan & Irina</span></span
-          >
+          <span class="muted">© <span id="y"></span> <span>Jonathan & Irina</span></span>
         </div>
       </footer>
     </main>
+<script src="script.js"></script>
 
-    <script src="script.js"></script>
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  let lang = urlParams.get('lang');
+
+  if (lang) localStorage.setItem('siteLang', lang);
+
+  const savedLang = localStorage.getItem('siteLang');
+  if (savedLang) lang = savedLang;
+
+  if (lang) {
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      const key = el.dataset.i18n;
+      if (translations[lang][key]) el.textContent = translations[lang][key];
+    });
+
+    document.querySelectorAll(".lang button").forEach(b => b.setAttribute("aria-pressed", "false"));
+    const siteBtn = document.querySelector(`.lang button[data-lang="${lang}"]`);
+    if (siteBtn) siteBtn.setAttribute("aria-pressed", "true");
+  }
+
+          document.querySelectorAll(".lang button").forEach(btn => {
+            btn.addEventListener("click", () => {
+              const selectedLang = btn.dataset.lang;
+              localStorage.setItem('siteLang', selectedLang);
+              window.location.search = `?lang=${selectedLang}`; // перезагрузка с выбранным языком
+            });
+          });
+        </script>
   </body>
 </html>
