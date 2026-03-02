@@ -17,20 +17,20 @@
     <main>
       <section class="hero">
         <div class="container">
-          <h1 class="title">
+          <h1 class="title fade-in ">
             Jonathan <br>
             <span class="amp">&</span> <br>
             Irina
           </h1>
           <hr />
-          <p class="kicker" data-i18n="we_marry">Мы женимся!</p>
-          <p class="data">19|07|26</p>
+          <p class="kicker fade-in delay-2" data-i18n="we_marry">Мы женимся!</p>
+          <p class="data reveal">19|07|26</p>
         </div>
       </section>
       
-      <section class="section">
+      <section class="section fade-in">
         <div class="container card">
-          <p class="kicker" data-i18n="dear_guests">Дорогие гости!</p>
+          <p class="h2" data-i18n="dear_guests">Дорогие гости!</p>
           <p class="p" data-i18n="invitation_text">
             Совсем скоро состоиться наша свадьба!
             Мы рады пригласить вас стать свидетелями этого торжества и разделить с нами самые яркие моменты!
@@ -39,8 +39,8 @@
       </section>
 
       <section class="section">
-        <div class="container card">
-          <p class="kicker" data-i18n="july">Июль</p>
+        <div class="container card fade-in">
+          <p class="h2" data-i18n="july">Июль</p>
           <div class="calendar">
             <div class="weekdays">
               <div data-i18n="mon">Пн</div>
@@ -90,9 +90,9 @@
         </div>
       </section>
 
-      <section class="section">
-        <div class="container card">
-          <p class="kicker" data-i18n="venue">Место проведения</p>
+      <section class="section fade-in">
+        <div class="container card fade-in">
+          <p class="h2" data-i18n="venue">Место проведения</p>
           <p class="p">Sala de festivități Poseidon</p>
           <a class="btn btn--ghost" href="https://www.google.com/maps?q=Sala+de+festivități+Poseidon" target="_blank"
             rel="noopener" data-i18n="view_map">
@@ -101,8 +101,8 @@
         </div>
       </section>
 
-      <section class="section" id="details">
-        <div class="card">
+      <section class="section fade-in" id="details">
+        <div class="card fade-in">
           <h2 class="h2" data-i18n="schedule">Тайминг</h2>
           <ul class="timeline">
             <li>
@@ -112,17 +112,14 @@
               <span class="timeline__time">16:00</span><span class="timeline__text" data-i18n="ceremony_start">Начало церемония</span>
               </li>
               <li>
-              <span class="timeline__time">17:00</span><span class="timeline__text" data-i18n="photoshoot">Фотосессия</span>
-              </li>
-              <li>
-              <span class="timeline__time">18:00</span><span class="timeline__text" data-i18n="banquet">Банкет</span>
+              <span class="timeline__time">17:00</span><span class="timeline__text" data-i18n="banquet">Банкет</span>
               </li>
               </ul>
               </div>
       </section>
 
-      <section class="section" id="details">
-        <div class="card">
+      <section class="section fade-in" id="details">
+        <div class="card fade-in">
           <h2 class="h2" data-i18n="dress_code">Дресс-код</h2>
           <p class="p" data-i18n="dress_text">
             Для нас главное - ваше присутствие! Но мы будем рады, если в своих нарядах вы поддержите нашу цветовую гамму и
@@ -136,8 +133,8 @@
         </div>
       </section>
 
-      <section class="section">
-        <div class="container card">
+      <section class="section fade-in">
+        <div class="container card fade-in">
           <h2 class="h2" data-i18n="contacts_title">Контакты</h2>
           <div class="contacts">
             <a class="link" href="https://t.me/username" target="_blank" rel="noopener">Telegram</a>
@@ -182,6 +179,47 @@
               window.location.search = `?lang=${selectedLang}`; // перезагрузка с выбранным языком
             });
           });
-        </script>
+          </script>
+          <script>
+            document.addEventListener("DOMContentLoaded", () => {
+
+              const elements = document.querySelectorAll(".fade-in");
+
+              const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                  if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                    observer.unobserve(entry.target);
+                  }
+                });
+              }, {
+                threshold: 0.15
+              });
+
+              elements.forEach(el => observer.observe(el));
+
+            });
+          </script>
+          
+          <script>
+            document.addEventListener("DOMContentLoaded", () => {
+
+              const reveals = document.querySelectorAll(".reveal");
+
+              const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                  if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                    observer.unobserve(entry.target); // чтобы появлялось один раз
+                  }
+                });
+              }, {
+                threshold: 0.2
+              });
+
+              reveals.forEach(el => observer.observe(el));
+
+            });
+</script>
   </body>
 </html>

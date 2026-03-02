@@ -52,15 +52,28 @@ html {
 }
 body {
   margin: 0;
-  background:
+  /* background:
     radial-gradient(1200px 800px at 20% -10%, rgba(111, 123, 90, 0.08), transparent 55%),
       radial-gradient(1000px 700px at 80% 0%, rgba(0, 0, 0, 0.05), transparent 50%),
     var(--bg);
+      */ background: url('./images/satin1.jpg') no-repeat center center fixed;
+        background-size: cover;
   color: var(--text);
   font-family: "Oceanic";
   line-height: 1.55;
 }
 
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0.3)),
+    url('./images/satin1.jpg') no-repeat center center;
+  background-size: cover;
+  z-index: -1;
+
+}
 .container {
   width: min(980px, calc(100% - 32px));
   margin: 0 auto;
@@ -104,20 +117,20 @@ body {
   margin: 0;
   font-family: "Oceanic";
   font-weight: 400;
-  font-size: clamp(50px, 10vw, 100px);
+  font-size: clamp(50px, 15vw, 100px);
   line-height: 1.1;
   text-align: center;
 }
 
 .amp {
   display: inline-block;
-  font-size: 0.7em;
-  margin: 6px 0;
+  font-size: 0.8em;
+    margin: 6px 0;
 }
 
 .kicker {
-  margin: 50px 0 10px;
-    font-size: 50px;
+  margin: 55px 0 30px;
+    font-size: 70px;
     text-align: center;
     color: rgba(12, 12, 12, 0.92);
     font-family: "Florisel Script", cursive;
@@ -143,7 +156,10 @@ hr {
    SECTIONS / CARDS / TEXT
 ========================= */
 .section {
-  padding: 18px 0;
+    /* display: flex; */
+      /* align-items: center; */
+      /* justify-content: center; */
+      padding: 50px 0;
 }
 
 .card {
@@ -154,15 +170,18 @@ hr {
 }
 
 .h2 {
-  margin: 0 0 10px;
+  margin: 0;
   font-family: "Florisel Script", cursive;
   font-weight: 400;
+  padding: 0;
   letter-spacing: 0.02em;
   font-size: 50px;
 }
 
 .p {
   margin: 0;
+  padding: 0;
+    font-size: 20px;
   text-align: center;
 }
 .muted {
@@ -206,8 +225,7 @@ hr {
 .calendar {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  margin-top: 12px;
+    gap: 8px;
 }
 
 .weekdays,
@@ -389,4 +407,49 @@ hr {
   background: #fff;
   color: #222;
   transform: scale(1.1);
+}
+/* =========================
+   ANIMATIONS
+========================= */
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay-1 {
+  transition-delay: 0.2s;
+}
+
+.delay-2 {
+  transition-delay: 0.4s;
+}
+
+.delay-3 {
+  transition-delay: 0.6s;
+}
+
+.delay-4 {
+  transition-delay: 0.8s;
+}
+
+/* =========================
+   SCROLL REVEAL
+========================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
