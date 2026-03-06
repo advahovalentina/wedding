@@ -6,6 +6,12 @@
     <title>Wedding Invitation</title>
     <meta name="description" content="Wedding invitation" />
     <link rel="stylesheet" href="style.css" />
+<link rel="icon" href="./images/rings.png" sizes="any" />
+<link rel="icon" href="./images/rings.png" type="image/svg+xml" />
+
+<link rel="apple-touch-icon" href="./images/apple-touch-icon.png" />
+
+<link rel="manifest" href="./site.webmanifest" />
   </head>
   <body>
 <div class="lang">
@@ -18,15 +24,15 @@
       <section class="hero">
         <div class="container">
         <div class="hero__names fade-in">
-          <span class="hero__name name-left">Jonathan</span>
+          <span class="hero__name ">Jonathan</span>
           <span class="hero__amp">&</span>
-          <span class="hero__name name-right">Irina</span>
+          <span class="hero__name ">Irina</span>
         </div>
-        <div class="couple-card fade-in delay-1">
+        <!-- <div class="couple-card fade-in delay-1">
           <div class="couple-image">
             <img src="./images/couple.jpg" alt="Jonathan & Irina">
           </div>
-        </div>
+        </div> -->
           <hr />
           <p class="kicker fade-in delay-2" data-i18n="we_marry">Мы женимся!</p>
           <p class="data reveal">19|07|26</p>
@@ -111,21 +117,33 @@
       </section>
 
       <section class="section fade-in" id="details">
-        <div class="card fade-in">
-          <h2 class="h2" data-i18n="schedule">Тайминг</h2>
-          <ul class="timeline">
-            <li>
-              <span class="timeline__time">15:30</span><span class="timeline__text" data-i18n="guests_arrival">Сбор гостей</span>
-              </li>
-              <li>
-              <span class="timeline__time">16:00</span><span class="timeline__text" data-i18n="ceremony_start">Начало церемония</span>
-              </li>
-              <li>
-              <span class="timeline__time">17:00</span><span class="timeline__text" data-i18n="banquet">Банкет</span>
-              </li>
-              </ul>
-              </div>
-      </section>
+  <div class="card fade-in">
+    <h2 class="h2" data-i18n="schedule">Тайминг</h2>
+    <ul class="timeline">
+      <li>
+        <span class="timeline__time">15:30</span>
+        <div class="timeline__icon">
+          <img src="./images/ring.png" alt="icon">
+        </div>
+        <span class="timeline__text" data-i18n="guests_arrival">Сбор гостей</span>
+        </li>
+        <li>
+        <span class="timeline__time">16:00</span>
+        <div class="timeline__icon">
+          <img src="./images/placeholder.png" alt="icon">
+        </div>
+        <span class="timeline__text" data-i18n="ceremony_start">Начало церемонии</span>
+        </li>
+        <li>
+        <span class="timeline__time">17:00</span>
+        <div class="timeline__icon">
+          <img src="./images/wedding-dinner.png" alt="icon">
+        </div>
+        <span class="timeline__text" data-i18n="banquet">Банкет</span>
+        </li>
+        </ul>
+        </div>
+        </section>
 
       <section class="section fade-in" id="details">
         <div class="card fade-in">
