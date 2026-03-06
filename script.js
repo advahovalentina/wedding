@@ -14,8 +14,14 @@ const translations = {
     banquet: "Праздничный ужин",
     dress_code: "Дресс-код",
     dress_text: "Для нас самое важное — ваше присутствие. Но мы будем рады, если в своих нарядах вы поддержите цветовую гамму и стиль нашей свадьбы.",
+
+    rsvp_title: "Подтверждение присутствия",
+    rsvp_text: "Будем признательны, если вы подтвердите своё присутствие до",
+    rsvp_date: "1 июня",
+
     contacts_title: "Контакты"
   },
+
   en: {
     we_marry: "We're getting married!",
     dear_guests: "Dear guests!",
@@ -31,11 +37,18 @@ const translations = {
     banquet: "Reception",
     dress_code: "Dress Code",
     dress_text: "Your presence means the most to us. We would also love if your outfits match the color palette and style of our wedding.",
+
+  rsvp_title: "Confirm attendance",
+    rsvp_text: "Please confirm your attendance by",
+    rsvp_date: "June 1",
+    rsvp_date: "1. Juni",
+
     contacts_title: "Contacts"
   },
+
   de: {
     we_marry: "Wir heiraten!",
-    dear_guests: "Liebe Gäste!",
+    dear_guests: "Liebe Gaste!",
     invitation_text: "Schon bald kommt einer der wichtigsten Tage unseres Lebens — unser Hochzeitstag. Wir würden uns sehr freuen, diesen besonderen Moment mit euch zu teilen und euch als Teil unserer Feier dabei zu haben.",
     july: "Juli",
     mon: "Mo", tue: "Di", wed: "Mi", thu: "Do", fri: "Fr", sat: "Sa", sun: "So",
@@ -48,6 +61,10 @@ const translations = {
     banquet: "Festessen",
     dress_code: "Dresscode",
     dress_text: "Das Wichtigste für uns ist eure Anwesenheit. Wir würden uns jedoch freuen, wenn eure Outfits die Farben und den Stil unserer Hochzeit widerspiegeln.",
+
+    rsvp_title: "Teilnahme bestatigen",
+    rsvp_text: "Bitte bestätigt eure Teilnahme bis zum",
+
     contacts_title: "Kontakte"
   }
 };
