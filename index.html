@@ -176,10 +176,11 @@
         <label class="form-label" data-i18n="form_name">Ваше Имя и Фамилия</label>
         <input type="text" name="guest_1_name" placeholder="Name" required class="form-input">
       </div>
-      <div class="form-group">
-        <label class="form-label" data-i18n="form_phone">Ваш номер телефона</label>
-        <input type="tel" name="guest_1_phone" placeholder="Phone number" required class="form-input">
-      </div>
+<div class="form-group">
+  <label class="form-label" data-i18n="form_phone">Ваш номер телефона</label>
+  <input type="tel" name="guest_1_phone" placeholder="+373 78 000 000" required class="form-input" id="phoneInput">
+  <span class="form-error" id="phoneError" data-i18n="phone_error"></span>
+  </div>
       <div class="form-group">
         <label class="form-label" data-i18n="form_attendance">Вы придете:</label>
         <select name="attendance_type" id="attendanceSelect" class="form-input" required>
@@ -195,9 +196,10 @@
           <input type="text" name="partner_name" placeholder="Partner's name" class="form-input">
         </div>
         <div class="form-group">
-          <label class="form-label" data-i18n="partner_phone">Телефон партнера</label>
-          <input type="tel" name="partner_phone" placeholder="Partner's phone" class="form-input">
-        </div>
+  <label class="form-label" data-i18n="partner_phone">Телефон партнера</label>
+  <input type="tel" name="partner_phone" placeholder="+373 78 000 000" class="form-input" id="partnerPhoneInput">
+  <span class="form-error" id="partnerPhoneError" data-i18n="phone_error"></span>
+  </div>
       </div>
       <div id="coupleSection" class="dynamic-section" style="display: none;">
         <div class="form-group">
@@ -324,6 +326,64 @@
                   }
                 });
             });
+
+  document.addEventListener("DOMContentLoaded", function () {
+
+    const form = document.getElementById("weddingForm");
+
+    const phoneInput = document.getElementById("phoneInput");
+    const phoneError = document.getElementById("phoneError");
+
+    const partnerPhoneInput = document.getElementById("partnerPhoneInput");
+    const partnerPhoneError = document.getElementById("partnerPhoneError");
+
+    const phoneRegex = /^\+?[0-9\s]{9,15}$/;
+
+    form.addEventListener("submit", function (e) {
+
+      let valid = true;
+
+      const phone = phoneInput.value.trim();
+
+      if (!phoneRegex.test(phone)) {
+        phoneError.classList.add("show");
+        phoneInput.classList.add("invalid");
+        valid = false;
+      }
+
+      if (partnerPhoneInput) {
+        const partnerPhone = partnerPhoneInput.value.trim();
+
+        if (partnerPhone !== "" && !phoneRegex.test(partnerPhone)) {
+          partnerPhoneError.classList.add("show");
+          partnerPhoneInput.classList.add("invalid");
+          valid = false;
+        }
+      }
+
+      if (!valid) {
+        e.preventDefault();
+      }
+
+    });
+
+    phoneInput.addEventListener("input", () => {
+      if (phoneRegex.test(phoneInput.value.trim())) {
+        phoneError.classList.remove("show");
+        phoneInput.classList.remove("invalid");
+      }
+    });
+
+    if (partnerPhoneInput) {
+      partnerPhoneInput.addEventListener("input", () => {
+        if (phoneRegex.test(partnerPhoneInput.value.trim())) {
+          partnerPhoneError.classList.remove("show");
+          partnerPhoneInput.classList.remove("invalid");
+        }
+      });
+    }
+
+  });
 </script>
   </body>
 </html>

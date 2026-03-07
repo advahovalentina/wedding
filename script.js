@@ -48,7 +48,8 @@ const translations = {
 
     confirm_btn: "Подтвердить участие",
 
-    contacts_title: "Контакты"
+    contacts_title: "Контакты",
+    phone_error: "Введите корректный номер телефона"
   },
 
   en: {
@@ -100,7 +101,8 @@ const translations = {
 
     confirm_btn: "Confirm attendance",
 
-    contacts_title: "Contacts"
+    contacts_title: "Contacts",
+    phone_error: "Please enter a valid phone number"
   },
 
   de: {
@@ -152,7 +154,8 @@ const translations = {
 
     confirm_btn: "Teilnahme bestätigen",
 
-    contacts_title: "Kontakte"
+    contacts_title: "Kontakte",
+    phone_error: "Bitte geben Sie eine gültige Telefonnummer ein"
   }
 };
 
